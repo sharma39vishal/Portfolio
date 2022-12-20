@@ -30,9 +30,11 @@ export default function Sheet() {
   
 var i=1;
   return (
-    <div>
-      <input type="file" className='btn btn-secondary mx-4 my-4' onChange={(event)=>{setImageUpload(event.target.files[0])}} />
-      <button  type="button"  className='btn btn-secondary' onClick={uploadImage}>Upload File</button>
+      <div class="mb-3">
+        <p>Hi!, This is file Store use to store file.</p>
+        <p> Download anywhwhere ,from any device & Anytime</p>
+      <input type="file"  className='btn btn-secondary mx-4 my-4' onChange={(event)=>{setImageUpload(event.target.files[0])}} />
+      <button  type="button" className='btn btn-secondary' onClick={uploadImage}>Upload File</button>
        {fileList?.map((url)=>{
         return <div key={url} className="my-4 mx-4"> <a href={url} style={{color:"white"}}><p >{i++}) {url}</p></a></div>;
        })}
